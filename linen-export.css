@@ -1,0 +1,68 @@
+/* ========================================================================
+   typora-linen-export v0.1
+   PDF / HTML export theme for Typora, paired with linen-paper (reading)
+   ======================================================================== */
+
+/* @font-face declarations */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Noto Serif SC'),
+       url('https://fonts.gstatic.com/s/notoserifsc/v35/H4cyBXePl9DZ0Xe7gG9cyOj7uK2-n-D2rd4FY7SCqxWo-Y_DcSWDUUc.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code Nerd Font';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Fira Code Nerd Font'),
+       url('https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@3.2.1/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf') format('truetype');
+}
+
+@page {
+  size: A4;
+  margin: 30mm;
+  @bottom-center {
+    content: counter(page);
+  }
+}
+
+h1 {
+  page-break-before: always;
+}
+
+:root {
+  /* Surface */
+  --bg:           #ffffff;
+  --bg-selection: rgba(61, 107, 107, 0.18);
+
+  /* Text */
+  --text:         #1f1f1f;
+  --text-mute:    #5a5247;
+  --text-faint:   #8a8275;
+
+  /* Accent */
+  --accent:       #3d6b8f;
+  --accent-hover: #2d5a7f;
+
+  /* Code */
+  --code-bg:      #f4f4f4;
+  --inline-bg:    #ebebeb;
+
+  /* Borders */
+  --border:       #d0d0d0;
+  --blockquote:   #dfe2e5;
+
+  /* Semantic */
+  --mark-bg:      #fff3a8;
+  --del:          #a04040;
+  --ins:          #3d6b40;
+
+  --caret:        var(--accent);
+}
+
+html {
+  font-size: 16px;
+  caret-color: var(--caret);
+}
