@@ -32,7 +32,7 @@ h1 {
   page-break-before: always;
 }
 
-:root {
+body.typora-export {
   /* Surface */
   --bg:           #ffffff;
   --bg-selection: rgba(61, 107, 107, 0.18);
@@ -178,6 +178,7 @@ body.typora-export td {
   border: 1px solid var(--border);
   padding: 6px 10px;
   text-align: left;
+  font-family: 'Source Han Serif SC', 'Songti SC', serif;
   font-size: 0.875rem;
 }
 
@@ -198,6 +199,7 @@ body.typora-export figcaption {
   font-style: italic;
   text-align: center;
   color: var(--text-mute);
+  font-family: 'Source Han Serif SC', 'Songti SC', serif;
   font-size: 0.75rem;
   margin-top: 0.5em;
 }
@@ -207,8 +209,14 @@ body.typora-export code {
   background: var(--inline-bg);
   padding: 0.1em 0.35em;
   font-family: 'Fira Code Nerd Font', 'JetBrainsMono Nerd Font', 'Fira Code', monospace;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   border-radius: 0;
+}
+
+body.typora-export kbd,
+body.typora-export samp {
+  font-family: 'Fira Code Nerd Font', 'JetBrainsMono Nerd Font', 'Fira Code', monospace;
+  font-size: 0.875rem;
 }
 
 /* Code block */
