@@ -183,3 +183,50 @@ body.typora-export th {
   background: var(--code-bg);
   font-weight: 600;
 }
+
+/* Image */
+body.typora-export img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+body.typora-export figcaption {
+  font-style: italic;
+  text-align: center;
+  color: var(--text-mute);
+  font-size: 0.75rem;
+  margin-top: 0.5em;
+}
+
+/* Inline code */
+body.typora-export code {
+  background: var(--inline-bg);
+  padding: 0.1em 0.35em;
+  font-family: 'Fira Code Nerd Font', 'JetBrainsMono Nerd Font', 'Fira Code', monospace;
+  font-size: 0.875em;
+  border-radius: 0;
+}
+
+/* Code block */
+body.typora-export pre {
+  margin: 1em 0;
+  padding: 0;
+}
+
+body.typora-export pre code {
+  background: var(--code-bg);
+  padding: 1em;
+  display: block;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* Math (KaTeX passthrough) */
+body.typora-export .md-math {
+  margin: 1em 0;
+}
