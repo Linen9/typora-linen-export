@@ -230,3 +230,37 @@ body.typora-export pre code {
 body.typora-export .md-math {
   margin: 1em 0;
 }
+
+/* Semantic */
+body.typora-export mark {
+  background: var(--mark-bg);
+  padding: 0 0.2em;
+  color: var(--text);
+}
+
+body.typora-export del {
+  color: var(--del);
+  text-decoration: line-through;
+}
+
+body.typora-export ins {
+  color: var(--ins);
+  text-decoration: underline;
+}
+
+body.typora-export ::selection {
+  background: var(--bg-selection);
+}
+
+body.typora-export a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+body.typora-export,
+body.typora-export code,
+body.typora-export pre,
+body.typora-export mark {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
