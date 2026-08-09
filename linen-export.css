@@ -94,10 +94,10 @@ body.typora-export h6 {
 
 body.typora-export h1 { font-size: 1.25rem; }
 body.typora-export h2 { font-size: 1.125rem; }
-body.typora-export h3 { font-size: 1rem; }
+body.typora-export h3 { font-size: 1rem; color: var(--text); }
 body.typora-export h4 { font-size: 1rem; color: var(--text-mute); }
 body.typora-export h5 { font-size: 1rem; color: var(--text-mute); }
-body.typora-export h6 { font-size: 1rem; color: var(--text-mute); font-weight: 400; }
+body.typora-export h6 { font-size: 1rem; color: var(--text-faint); font-weight: 400; }
 
 /* Paragraph */
 body.typora-export p {
@@ -127,7 +127,7 @@ body.typora-export i {
 }
 
 body.typora-export small {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--text-mute);
 }
 
@@ -154,10 +154,11 @@ body.typora-export li {
 
 /* Blockquote */
 body.typora-export blockquote {
-  border-left: 4px solid var(--blockquote);
-  padding: 0 15px;
+  border-left: 3px solid var(--accent);
+  padding: 4px 20px;
   margin: 1em 0;
-  color: var(--text);
+  color: var(--text-mute);
+  font-style: italic;
   background: transparent;
   font-size: 0.875rem;
 }
@@ -207,10 +208,10 @@ body.typora-export figcaption {
 /* Inline code */
 body.typora-export code {
   background: var(--inline-bg);
-  padding: 0.1em 0.35em;
+  padding: 1px 6px;
   font-family: 'Fira Code Nerd Font', 'JetBrainsMono Nerd Font', 'Fira Code', monospace;
   font-size: 0.875rem;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 body.typora-export kbd,
@@ -223,6 +224,7 @@ body.typora-export samp {
 body.typora-export pre {
   margin: 1em 0;
   padding: 0;
+  position: relative;
 }
 
 body.typora-export pre code {
@@ -231,29 +233,66 @@ body.typora-export pre code {
   display: block;
   overflow-x: auto;
   border: 1px solid var(--border);
-  border-radius: 0;
+  border-radius: 5px;
   line-height: 1.5;
   font-size: 0.875rem;
 }
 
-/* Math (KaTeX passthrough) */
+/* Code language pill (rendered by Typora above code blocks) */
+body.typora-export pre::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0.25em;
+  right: 0.5em;
+  font-family: 'Fira Code Nerd Font', 'JetBrainsMono Nerd Font', monospace;
+  font-size: 0.6875rem;
+  color: var(--text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+/* Math */
 body.typora-export .md-math {
   margin: 1em 0;
 }
 
+/* Inline math — subtle background pill */
+body.typora-export .md-math[display="inline"],
+body.typora-export span.math-inline {
+  background: var(--inline-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Block math — centered with light background */
+body.typora-export .md-math[display="block"],
+body.typora-export .math-display {
+  text-align: center;
+  background: var(--inline-bg);
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 5px;
+}
+
 /* Semantic */
-body.typora-export mark {
+body.typora-export mark,
+body.typora-export span.mark {
   background: var(--mark-bg);
   padding: 0 0.2em;
   color: var(--text);
+  border-radius: 2px;
 }
 
-body.typora-export del {
+body.typora-export del,
+body.typora-export span.delete,
+body.typora-export span.del {
   color: var(--del);
   text-decoration: line-through;
 }
 
-body.typora-export ins {
+body.typora-export ins,
+body.typora-export span.insert {
   color: var(--ins);
   text-decoration: underline;
 }
