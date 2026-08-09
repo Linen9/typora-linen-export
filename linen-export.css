@@ -159,6 +159,7 @@ body.typora-export blockquote {
   margin: 1em 0;
   color: var(--text);
   background: transparent;
+  font-size: 0.875rem;
 }
 
 body.typora-export blockquote blockquote {
@@ -177,6 +178,7 @@ body.typora-export td {
   border: 1px solid var(--border);
   padding: 6px 10px;
   text-align: left;
+  font-size: 0.875rem;
 }
 
 body.typora-export th {
